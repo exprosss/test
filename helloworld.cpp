@@ -1,16 +1,18 @@
 #include <iostream>
-int fib(int n) {
-  if (n==0) {
-    return 0;
-  } else if (n==1) {
-    return 1;
-  } else {
-    return fib(n-1)+fib(n-2);
+using namespace std;
+void fib(int n) {
+  int fb1=0;
+  int fb2=1; 
+  int fb3;
+  for (int i=0; i<n; i++) {
+    cout<<fb1<<endl;
+    fb3=fb1+fb2;
+    fb1=fb2;
+    fb2=fb3;
   }
 }
-using namespace std;
 int main() {
     cout<<"Hello world"<<endl;
     int n; cout<<"Введите n: "; cin>>n;
-    cout<<fib(n-1);
+    fib(n);
 }
